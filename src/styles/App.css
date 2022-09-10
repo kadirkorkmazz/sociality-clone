@@ -1,0 +1,10 @@
+@import './Normalize.css';
+html {
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 2rem;
+}/*# sourceMappingURL=App.css.map */
