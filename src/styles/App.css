@@ -1,10 +1,134 @@
+@charset "UTF-8";
 @import './Normalize.css';
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 10px;
-  font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
 }
 
 body {
   font-size: 2rem;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1538px;
+  height: 1206px;
+  background-color: #f5f7f8;
+}
+
+.navigation {
+  width: 274px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.navigation .sociality-logo {
+  width: 100%;
+  height: 51px;
+  background-color: #31363b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navigation .navigation-bottom {
+  display: flex;
+  height: 100%;
+}
+.navigation .client-logos {
+  width: 66px;
+  height: 100%;
+  background-color: #2a2f33;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navigation .client-logos img {
+  margin-top: 1.3rem;
+}
+.navigation .menu {
+  width: 208px;
+  height: 100%;
+  background-color: #393d42;
+}
+.navigation .menu .menuTop {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: 57px;
+  color: #d8d8d8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1rem;
+}
+.navigation .menu .menuTop .content {
+  width: 100%;
+  font-size: 1.4rem;
+}
+.navigation .menu .menuTop img {
+  margin: 0 1.3rem;
+  color: #ffffff !important;
+}
+.navigation .menu .menuTop img svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+.navigation .menu .menuTop img svg g g polygon {
+  color: yellow;
+  background-color: yellow;
+}
+.navigation .menu .menuTop img span + span {
+  color: black;
+  font-size: 5rem;
+  font-weight: 100;
+}
+.navigation .menu .subMenu {
+  flex-direction: column;
+  display: none;
+  align-items: left;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-left: 1rem;
+}
+.navigation .menu .subMenu div {
+  color: #d8d8d8;
+  margin: 1rem;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+.navigation .menu .subMenu div::before {
+  content: "•";
+  color: #d8d8d8;
+  margin-right: 1rem;
+  font-size: 3rem;
+  text-align: center;
+}
+.navigation .menu .subMenu div:hover {
+  color: #f55661;
+}
+.navigation .menu .subMenu div:hover::before {
+  color: #f55661;
+}
+.navigation .menu .selectedMenu .menuTop {
+  background-color: #f55661;
+}
+.navigation .menu .selectedMenu .menuTop span + span {
+  color: #2a2f33;
+}
+.navigation .menu .selectedMenu .subMenu {
+  display: flex;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=App.css.map */
