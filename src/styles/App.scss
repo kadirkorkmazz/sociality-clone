@@ -151,3 +151,78 @@ body {
   width: 100%;
   height: 100%;
 }
+
+.card {
+  width: 369px;
+  height: 426px;
+  background-color: #ffffff;
+  display: flex;
+  font-size: 1.4rem;
+  font-family: Helvetica, Arial;
+  color: #959595;
+  margin: 5rem;
+
+  .cardLeftBar {
+    width: 40px;
+    height: 100%;
+    background-color: #3ac183;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      color: white;
+    }
+  }
+
+  .cardRightArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 2rem;
+
+    .cardTopActions {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+
+      .cardActions {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 30%;
+
+        svg {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .cardBottomActions {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      width: 100%;
+      div + div {
+        margin-left: 2rem;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 15%;
+
+        svg {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@ import './styles/App.css';
 import socialityLogo from './img/sociality-logo.svg';
 import Clients from './components/Clients';
 import Menu from './components/Menu';
+import Card from './components/Card';
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
           <Menu />
         </div>
       </div>
-      <div className='main'></div>
+      <div className='main'>
+        <Card />
+      </div>
     </div>
   );
 }
