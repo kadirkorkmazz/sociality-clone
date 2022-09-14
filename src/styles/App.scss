@@ -1,6 +1,7 @@
 @import './Normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+$color1: #f5f5f5;
 @mixin flexCenter {
   display: flex;
   align-items: center;
@@ -20,19 +21,19 @@ body {
 
 .App {
   @include flexCenter();
-  width: 1538px;
-  height: 1206px;
+  width: 153.8rem;
+  height: 120.6rem;
   background-color: #f5f7f8;
 }
 .navigation {
-  width: 274px;
+  width: 27.4rem;
   height: 100%;
   display: flex;
   flex-direction: column;
 
   .sociality-logo {
     width: 100%;
-    height: 51px;
+    height: 5.1rem;
     background-color: #31363b;
     @include flexCenter();
   }
@@ -42,7 +43,7 @@ body {
     height: 100%;
   }
   .client-logos {
-    width: 66px;
+    width: 6.6rem;
     height: 100%;
     background-color: #2a2f33;
     display: flex;
@@ -55,7 +56,7 @@ body {
   }
 
   .menu {
-    width: 208px;
+    width: 20.8rem;
     height: 100%;
     background-color: #393d42;
 
@@ -63,7 +64,7 @@ body {
       background-color: transparent;
       border: none;
       width: 100%;
-      height: 57px;
+      height: 5.7rem;
       color: #d8d8d8;
       display: flex;
       align-items: center;
@@ -76,21 +77,6 @@ body {
       }
       img {
         margin: 0 1.3rem;
-        color: #ffffff !important;
-
-        svg {
-          g {
-            g {
-              polygon {
-                color: yellow;
-                background-color: yellow;
-              }
-            }
-          }
-          fill: #ffffff !important;
-          color: #ffffff !important;
-        }
-
         span + span {
           color: black;
           font-size: 5rem;
@@ -150,20 +136,81 @@ body {
 .main {
   width: 100%;
   height: 100%;
+  padding: 2.5rem;
+
+  .mainTop {
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    align-items: center;
+    .pp {
+      width: 50%;
+      display: flex;
+      justify-content: right;
+      img {
+        height: 6rem;
+      }
+    }
+  }
+
+  .descriptions {
+    display: flex;
+    height: 2rem;
+    font-size: 1.5rem;
+    align-items: center;
+
+    div {
+      margin: 1rem;
+      display: flex;
+      align-items: center;
+    }
+    div::before {
+      font-size: 5rem;
+      content: '\2022';
+      margin-right: 1rem;
+    }
+
+    :nth-child(1)::before {
+      color: #acacac;
+    }
+    :nth-child(2)::before {
+      color: #3ac183;
+    }
+    :nth-child(3)::before {
+      color: #f7bf38;
+    }
+    :nth-child(4)::before {
+      color: #fb6450;
+    }
+    :nth-child(5)::before {
+      color: #67b1f2;
+    }
+  }
+
+  .divByDate {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    color: #959595;
+  }
+
+  .cardsArea {
+    display: flex;
+  }
 }
 
 .card {
-  width: 369px;
-  height: 426px;
+  width: 36.9rem;
+  height: 44.6rem;
   background-color: #ffffff;
   display: flex;
   font-size: 1.4rem;
   font-family: Helvetica, Arial;
   color: #959595;
-  margin: 5rem;
-
+  margin-right: 3rem;
+  margin-top: 2rem;
   .cardLeftBar {
-    width: 40px;
+    width: 4rem;
     height: 100%;
     background-color: #3ac183;
     display: flex;
@@ -225,4 +272,8 @@ body {
       }
     }
   }
+}
+
+.divByDate {
+  display: flex;
 }

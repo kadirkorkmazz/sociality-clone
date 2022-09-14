@@ -18,20 +18,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1538px;
-  height: 1206px;
+  width: 153.8rem;
+  height: 120.6rem;
   background-color: #f5f7f8;
 }
 
 .navigation {
-  width: 274px;
+  width: 27.4rem;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 .navigation .sociality-logo {
   width: 100%;
-  height: 51px;
+  height: 5.1rem;
   background-color: #31363b;
   display: flex;
   align-items: center;
@@ -42,7 +42,7 @@ body {
   height: 100%;
 }
 .navigation .client-logos {
-  width: 66px;
+  width: 6.6rem;
   height: 100%;
   background-color: #2a2f33;
   display: flex;
@@ -53,7 +53,7 @@ body {
   margin-top: 1.3rem;
 }
 .navigation .menu {
-  width: 208px;
+  width: 20.8rem;
   height: 100%;
   background-color: #393d42;
 }
@@ -61,7 +61,7 @@ body {
   background-color: transparent;
   border: none;
   width: 100%;
-  height: 57px;
+  height: 5.7rem;
   color: #d8d8d8;
   display: flex;
   align-items: center;
@@ -74,15 +74,6 @@ body {
 }
 .navigation .menu .menuTop img {
   margin: 0 1.3rem;
-  color: #ffffff !important;
-}
-.navigation .menu .menuTop img svg {
-  fill: #ffffff !important;
-  color: #ffffff !important;
-}
-.navigation .menu .menuTop img svg g g polygon {
-  color: yellow;
-  background-color: yellow;
 }
 .navigation .menu .menuTop img span + span {
   color: black;
@@ -131,20 +122,76 @@ body {
 .main {
   width: 100%;
   height: 100%;
+  padding: 2.5rem;
+}
+.main .mainTop {
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+}
+.main .mainTop .pp {
+  width: 50%;
+  display: flex;
+  justify-content: right;
+}
+.main .mainTop .pp img {
+  height: 6rem;
+}
+.main .descriptions {
+  display: flex;
+  height: 2rem;
+  font-size: 1.5rem;
+  align-items: center;
+}
+.main .descriptions div {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+}
+.main .descriptions div::before {
+  font-size: 5rem;
+  content: "•";
+  margin-right: 1rem;
+}
+.main .descriptions :nth-child(1)::before {
+  color: #acacac;
+}
+.main .descriptions :nth-child(2)::before {
+  color: #3ac183;
+}
+.main .descriptions :nth-child(3)::before {
+  color: #f7bf38;
+}
+.main .descriptions :nth-child(4)::before {
+  color: #fb6450;
+}
+.main .descriptions :nth-child(5)::before {
+  color: #67b1f2;
+}
+.main .divByDate {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  color: #959595;
+}
+.main .cardsArea {
+  display: flex;
 }
 
 .card {
-  width: 369px;
-  height: 426px;
+  width: 36.9rem;
+  height: 44.6rem;
   background-color: #ffffff;
   display: flex;
   font-size: 1.4rem;
   font-family: Helvetica, Arial;
   color: #959595;
-  margin: 5rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
 }
 .card .cardLeftBar {
-  width: 40px;
+  width: 4rem;
   height: 100%;
   background-color: #3ac183;
   display: flex;
@@ -197,4 +244,8 @@ body {
 }
 .card .cardRightArea .cardBottomActions div svg {
   opacity: 0.5;
+}
+
+.divByDate {
+  display: flex;
 }/*# sourceMappingURL=App.css.map */
