@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import './Normalize.css';
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -137,6 +138,8 @@ body {
 }
 .main .mainTop .pp img {
   height: 6rem;
+  margin-right: -3rem;
+  margin-top: 0.5rem;
 }
 .main .descriptions {
   display: flex;
@@ -175,6 +178,10 @@ body {
   padding: 2rem 1rem;
   color: #959595;
 }
+.main .divByDate .date {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 2.2rem;
+}
 .main .cardsArea {
   display: flex;
 }
@@ -187,19 +194,32 @@ body {
   font-size: 1.4rem;
   font-family: Helvetica, Arial;
   color: #959595;
-  margin-right: 3rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .card .cardLeftBar {
   width: 4rem;
   height: 100%;
-  background-color: #3ac183;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .card .cardLeftBar svg {
   color: white;
+}
+.card .status0 {
+  background-color: #f7bf38;
+}
+.card .status1 {
+  background-color: #3ac183;
+}
+.card .status2 {
+  background-color: #acacac;
+}
+.card .status3 {
+  background-color: #acacac;
+}
+.card .status4 {
+  background-color: #fb6450;
 }
 .card .cardRightArea {
   display: flex;
@@ -219,10 +239,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 30%;
+  width: auto;
 }
 .card .cardRightArea .cardTopActions .cardActions svg {
   opacity: 0.5;
+  margin: 0 0.5rem;
 }
 .card .cardRightArea img {
   width: 100%;
@@ -246,6 +267,6 @@ body {
   opacity: 0.5;
 }
 
-.divByDate {
-  display: flex;
+.card + .card {
+  margin-left: 3rem;
 }/*# sourceMappingURL=App.css.map */

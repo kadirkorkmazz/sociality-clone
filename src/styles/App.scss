@@ -1,7 +1,14 @@
 @import './Normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap');
 
 $color1: #f5f5f5;
+$needApproval: #f7bf38;
+$scheduled: #3ac183;
+$published: #acacac;
+$error: #fb6450;
+$notes: #67b1f2;
+
 @mixin flexCenter {
   display: flex;
   align-items: center;
@@ -149,6 +156,8 @@ body {
       justify-content: right;
       img {
         height: 6rem;
+        margin-right: -3rem;
+        margin-top: 0.5rem;
       }
     }
   }
@@ -171,19 +180,19 @@ body {
     }
 
     :nth-child(1)::before {
-      color: #acacac;
+      color: $published;
     }
     :nth-child(2)::before {
-      color: #3ac183;
+      color: $scheduled;
     }
     :nth-child(3)::before {
-      color: #f7bf38;
+      color: $needApproval;
     }
     :nth-child(4)::before {
-      color: #fb6450;
+      color: $error;
     }
     :nth-child(5)::before {
-      color: #67b1f2;
+      color: $notes;
     }
   }
 
@@ -192,6 +201,11 @@ body {
     flex-direction: column;
     padding: 2rem 1rem;
     color: #959595;
+
+    .date {
+      font-family: 'Barlow Semi Condensed', sans-serif;
+      font-size: 2.2rem;
+    }
   }
 
   .cardsArea {
@@ -207,18 +221,34 @@ body {
   font-size: 1.4rem;
   font-family: Helvetica, Arial;
   color: #959595;
-  margin-right: 3rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   .cardLeftBar {
     width: 4rem;
     height: 100%;
-    background-color: #3ac183;
     display: flex;
     align-items: center;
     justify-content: center;
     svg {
       color: white;
     }
+  }
+
+  .status0 {
+    background-color: $needApproval;
+  }
+
+  .status1 {
+    background-color: $scheduled;
+  }
+  .status2 {
+    background-color: $published;
+  }
+
+  .status3 {
+    background-color: $published;
+  }
+  .status4 {
+    background-color: $error;
   }
 
   .cardRightArea {
@@ -239,10 +269,11 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        width: 30%;
+        width: auto;
 
         svg {
           opacity: 0.5;
+          margin: 0 0.5rem;
         }
       }
     }
@@ -274,6 +305,6 @@ body {
   }
 }
 
-.divByDate {
-  display: flex;
+.card + .card {
+  margin-left: 3rem;
 }
