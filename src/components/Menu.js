@@ -18,11 +18,6 @@ function Menu() {
 
   const menuContent = [
     {
-      index: 1,
-      title: 'NOTIFICATIONS',
-      icon: menuIcon1,
-    },
-    {
       index: 2,
       title: 'SUMMARY',
       icon: menuIcon2,
@@ -51,6 +46,14 @@ function Menu() {
 
   return (
     <div className='menu'>
+      <div key={1}>
+        <div className='menuTop'>
+          <img src={menuIcon1} alt={`notification icon`} />
+          <span className='content'>NOTIFICATIONS</span>
+          <span className='notifCount'>29</span>
+        </div>
+      </div>
+
       {menuContent.map((menu) => (
         <div
           key={menu.index}
@@ -60,8 +63,10 @@ function Menu() {
           <div className='menuTop'>
             <img src={menu.icon} alt={`${menu.title} icon`} />
             <span className='content'>{menu.title}</span>
-            <span>{selected === menu.index ? '-' : '+'}</span>
+            <span className='plus'>{selected === menu.index ? '-' : '+'}</span>
           </div>
+          <div className='triangle'></div>
+
           <div className='subMenu'>
             <div>Compose</div>
             <div>Feed</div>

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap');
 
-$color1: #f5f5f5;
+$primary-color: #f55661;
 $needApproval: #f7bf38;
 $scheduled: #3ac183;
 $published: #acacac;
@@ -57,8 +57,60 @@ body {
     flex-direction: column;
     align-items: center;
 
-    img {
+    span {
+      font-size: 1.1rem;
+      color: #fff;
+      background-color: #3ac1a9;
+      border-radius: 100%;
+      position: absolute;
+      padding: 0.1rem;
+      right: 0;
+      top: 0;
+      margin-top: -0.5rem;
+      margin-right: -0.5rem;
+      display: none;
+    }
+
+    :nth-child(2) {
+      span {
+        display: block;
+      }
+    }
+
+    div {
+      @include flexCenter();
       margin-top: 1.3rem;
+      position: relative;
+
+      img {
+        opacity: 0.25;
+
+        &:hover {
+          opacity: 0.5;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .clientLocation {
+      border-left: 0.4rem solid $primary-color;
+      border-top: 0.4rem solid transparent;
+      border-bottom: 0.4rem solid transparent;
+      height: 3.7rem;
+      width: 0;
+      margin-top: 0;
+      margin-right: 1rem;
+      margin-left: -1.2rem;
+      display: none;
+    }
+  }
+
+  .selectedClient {
+    img {
+      opacity: 1 !important;
+    }
+    .clientLocation {
+      display: block;
     }
   }
 
@@ -72,11 +124,15 @@ body {
       border: none;
       width: 100%;
       height: 5.7rem;
-      color: #d8d8d8;
-      display: flex;
-      align-items: center;
+      color: #fff;
+      @include flexCenter();
       justify-content: space-between;
       padding-right: 1rem;
+
+      &:hover {
+        background-color: #31363b;
+        cursor: pointer;
+      }
 
       .content {
         width: 100%;
@@ -89,6 +145,22 @@ body {
           font-size: 5rem;
           font-weight: 100;
         }
+      }
+
+      .plus {
+        margin-right: 1rem;
+        font-size: 4rem;
+        font-weight: 100;
+        color: #1d1d1d;
+      }
+      .notifCount {
+        font-size: 1.2rem;
+        width: 22%;
+        margin-right: 0.5rem;
+        border: 1px solid #73d9c7;
+        border-radius: 0.4rem;
+
+        @include flexCenter();
       }
     }
 
@@ -116,9 +188,10 @@ body {
         }
 
         &:hover {
-          color: #f55661;
+          color: $primary-color;
+          cursor: pointer;
           &::before {
-            color: #f55661;
+            color: $primary-color;
           }
         }
       }
@@ -126,7 +199,7 @@ body {
 
     .selectedMenu {
       .menuTop {
-        background-color: #f55661;
+        background-color: $primary-color;
 
         span + span {
           color: #2a2f33;
@@ -135,6 +208,16 @@ body {
 
       .subMenu {
         display: flex;
+      }
+
+      .triangle {
+        display: flex;
+      }
+
+      img {
+        filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(352deg)
+          brightness(104%) contrast(101%);
+        background-color: transparent;
       }
     }
   }
@@ -222,12 +305,12 @@ body {
   font-family: Helvetica, Arial;
   color: #959595;
   margin-top: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
   .cardLeftBar {
     width: 4rem;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter();
+    border-radius: 0.5rem 0 0 0.5rem;
     svg {
       color: white;
     }
@@ -252,28 +335,29 @@ body {
   }
 
   .cardRightArea {
-    display: flex;
+    @include flexCenter();
     flex-direction: column;
-    align-items: center;
     justify-content: space-around;
     width: 100%;
     padding: 2rem;
 
     .cardTopActions {
-      display: flex;
+      @include flexCenter();
       width: 100%;
-      align-items: center;
       justify-content: space-between;
 
       .cardActions {
-        display: flex;
-        align-items: center;
+        @include flexCenter();
         justify-content: space-around;
         width: auto;
 
         svg {
           opacity: 0.5;
           margin: 0 0.5rem;
+          &:hover {
+            opacity: 1;
+            cursor: pointer;
+          }
         }
       }
     }
@@ -283,8 +367,7 @@ body {
     }
 
     .cardBottomActions {
-      display: flex;
-      align-items: center;
+      @include flexCenter();
       justify-content: left;
       width: 100%;
       div + div {
@@ -292,13 +375,17 @@ body {
       }
 
       div {
-        display: flex;
-        align-items: center;
+        @include flexCenter();
         justify-content: space-around;
         width: 15%;
 
         svg {
           opacity: 0.5;
+
+          &:hover {
+            opacity: 1;
+            cursor: pointer;
+          }
         }
       }
     }
@@ -307,4 +394,14 @@ body {
 
 .card + .card {
   margin-left: 3rem;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 0.6rem solid transparent;
+  border-right: 0.6rem solid transparent;
+  border-top: 0.5rem solid $primary-color;
+  margin-left: 2.2rem;
+  display: none;
 }

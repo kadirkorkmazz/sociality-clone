@@ -33,13 +33,14 @@ function Main() {
       {Object.values(data.posts_by_date)
         .sort()
         .map((post, index) => (
-          <div className='divByDate'>
+          <div className='divByDate' key={index}>
             <div className='date'>
               {handleDate(Object.keys(data.posts_by_date)[index])}
             </div>
             <div className='cardsArea'>
-              {post.map((subpost) => (
+              {post.map((subpost, index) => (
                 <Card
+                  key={index}
                   content={subpost.entry.message}
                   date={subpost.published_at}
                   image={subpost.entry.image}

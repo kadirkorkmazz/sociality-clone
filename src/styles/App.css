@@ -50,8 +50,52 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.navigation .client-logos img {
+.navigation .client-logos span {
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #3ac1a9;
+  border-radius: 100%;
+  position: absolute;
+  padding: 0.1rem;
+  right: 0;
+  top: 0;
+  margin-top: -0.5rem;
+  margin-right: -0.5rem;
+  display: none;
+}
+.navigation .client-logos :nth-child(2) span {
+  display: block;
+}
+.navigation .client-logos div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 1.3rem;
+  position: relative;
+}
+.navigation .client-logos div img {
+  opacity: 0.25;
+}
+.navigation .client-logos div img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.navigation .client-logos .clientLocation {
+  border-left: 0.4rem solid #f55661;
+  border-top: 0.4rem solid transparent;
+  border-bottom: 0.4rem solid transparent;
+  height: 3.7rem;
+  width: 0;
+  margin-top: 0;
+  margin-right: 1rem;
+  margin-left: -1.2rem;
+  display: none;
+}
+.navigation .selectedClient img {
+  opacity: 1 !important;
+}
+.navigation .selectedClient .clientLocation {
+  display: block;
 }
 .navigation .menu {
   width: 20.8rem;
@@ -63,11 +107,16 @@ body {
   border: none;
   width: 100%;
   height: 5.7rem;
-  color: #d8d8d8;
+  color: #fff;
   display: flex;
   align-items: center;
+  justify-content: center;
   justify-content: space-between;
   padding-right: 1rem;
+}
+.navigation .menu .menuTop:hover {
+  background-color: #31363b;
+  cursor: pointer;
 }
 .navigation .menu .menuTop .content {
   width: 100%;
@@ -80,6 +129,22 @@ body {
   color: black;
   font-size: 5rem;
   font-weight: 100;
+}
+.navigation .menu .menuTop .plus {
+  margin-right: 1rem;
+  font-size: 4rem;
+  font-weight: 100;
+  color: #1d1d1d;
+}
+.navigation .menu .menuTop .notifCount {
+  font-size: 1.2rem;
+  width: 22%;
+  margin-right: 0.5rem;
+  border: 1px solid #73d9c7;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .navigation .menu .subMenu {
   flex-direction: column;
@@ -106,6 +171,7 @@ body {
 }
 .navigation .menu .subMenu div:hover {
   color: #f55661;
+  cursor: pointer;
 }
 .navigation .menu .subMenu div:hover::before {
   color: #f55661;
@@ -118,6 +184,13 @@ body {
 }
 .navigation .menu .selectedMenu .subMenu {
   display: flex;
+}
+.navigation .menu .selectedMenu .triangle {
+  display: flex;
+}
+.navigation .menu .selectedMenu img {
+  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(352deg) brightness(104%) contrast(101%);
+  background-color: transparent;
 }
 
 .main {
@@ -195,6 +268,7 @@ body {
   font-family: Helvetica, Arial;
   color: #959595;
   margin-top: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 .card .cardLeftBar {
   width: 4rem;
@@ -202,6 +276,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 0.5rem 0 0 0.5rem;
 }
 .card .cardLeftBar svg {
   color: white;
@@ -223,21 +298,24 @@ body {
 }
 .card .cardRightArea {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   justify-content: space-around;
   width: 100%;
   padding: 2rem;
 }
 .card .cardRightArea .cardTopActions {
   display: flex;
-  width: 100%;
   align-items: center;
+  justify-content: center;
+  width: 100%;
   justify-content: space-between;
 }
 .card .cardRightArea .cardTopActions .cardActions {
   display: flex;
   align-items: center;
+  justify-content: center;
   justify-content: space-around;
   width: auto;
 }
@@ -245,12 +323,17 @@ body {
   opacity: 0.5;
   margin: 0 0.5rem;
 }
+.card .cardRightArea .cardTopActions .cardActions svg:hover {
+  opacity: 1;
+  cursor: pointer;
+}
 .card .cardRightArea img {
   width: 100%;
 }
 .card .cardRightArea .cardBottomActions {
   display: flex;
   align-items: center;
+  justify-content: center;
   justify-content: left;
   width: 100%;
 }
@@ -260,13 +343,28 @@ body {
 .card .cardRightArea .cardBottomActions div {
   display: flex;
   align-items: center;
+  justify-content: center;
   justify-content: space-around;
   width: 15%;
 }
 .card .cardRightArea .cardBottomActions div svg {
   opacity: 0.5;
 }
+.card .cardRightArea .cardBottomActions div svg:hover {
+  opacity: 1;
+  cursor: pointer;
+}
 
 .card + .card {
   margin-left: 3rem;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 0.6rem solid transparent;
+  border-right: 0.6rem solid transparent;
+  border-top: 0.5rem solid #f55661;
+  margin-left: 2.2rem;
+  display: none;
 }/*# sourceMappingURL=App.css.map */
